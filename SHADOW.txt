@@ -1,0 +1,5 @@
+shadow prebuilt repo: pybind11 (host)
+  arch package: pybind11 v3.1.0-1, Arch Linux extra repo
+  api-level: universal (C++ headers & Python library host)
+  layout: pybind11-*.pkg.tar.zst at root; extracted include/ headers & pybind11/ module; Android.bp providing pybind11_headers
+  date: 2026-10-16

@@ -1,0 +1,35 @@
+package {
+    default_applicable_licenses: ["external_python_pybind11_license"],
+}
+
+license {
+    name: "external_python_pybind11_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-BSD",
+    ],
+    license_text: [
+        "LICENSE.txt",
+    ],
+}
+
+cc_library_headers {
+    name: "pybind11_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["include"],
+}
+
+python_library_host {
+    name: "pybind11",
+    srcs: [
+        "pybind11/**/*.py",
+    ],
+}
+
+python_library_host {
+    name: "py-pybind11",
+    srcs: [
+        "pybind11/**/*.py",
+    ],
+}
